@@ -5,48 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<style>
-		* {
-			box-sizing: border-box;
-			font-family: Helvetica, sans-serif;
-		}
-		body {
-			background-color: #333;
-			color: #ddd;
-			font-size: larger;
-			font-weight: bold;
-			margin: 0;
-		}
-
-		table {
-			font-family: arial, sans-serif;
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		td, th {
-			border: 1px solid #555;
-			text-align: left;
-			padding: 8px;
-		}
-
-		th {
-			position: -webkit-sticky;
-			position: sticky;
-			top: 0;
-			z-index: 2;
-			background-color: #3c3c3c;
-		}
-
-		tr:nth-child(even) {
-			background-color: #3c3c3c;
-		}
-
-		.filter {
-			/* float: right; */
-			font-size: medium;
-		}
-	</style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 	<table>
@@ -63,20 +22,6 @@
 	</table>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script type="text/javascript">
-		let max = 0;
-		let dataArr = [];
-
-		let socket = io.connect('http://' + document.domain + ':' + location.port);
-		socket.on('connect', function() {});
-
-		function writeData(data) {
-			dataArr[max] = data;
-			$('#dataLog').html(`<tr id='data_${max}'><td>${data.ip}</td><td>${data.type}</td><td>${data.id}</td><td>${data.seq}</td><td>${data.len}</td></tr>` + $('#dataLog').html());
-			max++;
-		}
-
-		socket.on('send data', function(data) { writeData(JSON.parse(data)); });
-	</script>
+	<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
