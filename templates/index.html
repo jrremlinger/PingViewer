@@ -11,11 +11,11 @@
 	<table>
 		<thead>
 			<tr>
-				<th>IP<br><span class="filter"><input type="checkbox">Filter: <input type="text"></span></th>
-				<th>Type<br><span class="filter"><input type="checkbox" checked>IPv4&emsp;<input type="checkbox" checked>IPv6</span></th>
-				<th>ID<br><span class="filter"><input type="checkbox">Filter: <select name="" id=""><option>=</option><option>></option><option>&lt</option></select><input type="number" style="width: 10em;"></span></th>
-				<th>Sequence<br><span class="filter"><input type="checkbox">Filter: <select name="" id=""><option>=</option><option>></option><option>&lt</option></select><input type="number" style="width: 10em;"></span></th>
-				<th>Length<br><span class="filter"><input type="checkbox">Filter: <select name="" id=""><option>=</option><option>></option><option>&lt</option></select><input type="number" style="width: 10em;"></span></th>
+				<th>IP<br><span class="filter"><input type="checkbox" id="ipFilterCheck" oninput="updateFilter()"><label for="ipFilterCheck">Filter: </label><input type="text" id="ipFilter" oninput="updateFilter()"></span></th>
+				<th>Type<br><span class="filter"><input type="checkbox" checked id="ipv4Check" oninput="updateFilter()"><label for="ipv4Check">IPv4</label>&emsp;<input type="checkbox" checked id="ipv6Check" oninput="updateFilter()"><label for="ipv6Check">IPv6</label></span></th>
+				<th>ID</th>
+				<th>Sequence</th>
+				<th>Length<br><span class="filter"><input type="checkbox" id="lengthFilterCheck" oninput="updateFilter()">Filter: <select id="filterOperator" oninput="updateFilter()"><option value="equals">=</option><option value="greater">></option><option value="less">&lt</option></select><input type="number" style="width: 6em;" id="lengthFilter" oninput="updateFilter()"></span></th>
 			</tr>
 		</thead>
 		<tbody id="dataLog"></tbody>
