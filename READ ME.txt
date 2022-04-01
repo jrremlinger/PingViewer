@@ -1,0 +1,20 @@
+# Ensure the linux environment is prepared
+sudo apt update
+sudo apt upgrade
+sudo apt install git
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install python3-testresources
+
+# Clone the repo and perform first time setup
+git clone https://github.com/ToxicOmegaMusic/PingViewer.git
+cd PingViewer/
+source venv/bin/activate
+pip3 install -r requirements.txt
+deactivate
+
+# Run the application, the application will be available on port 5012
+source venv/bin/activate
+python3 app.py
+
+# To close the program, hit 'ctrl + c'. Then run 'deactivate' to leave the virtual environment
