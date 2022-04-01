@@ -15,7 +15,7 @@
 				<th>Type<br><span class="filter"><input type="checkbox" checked id="ipv4Check" oninput="updateFilter()"><label for="ipv4Check">IPv4</label>&emsp;<input type="checkbox" checked id="ipv6Check" oninput="updateFilter()"><label for="ipv6Check">IPv6</label></span></th>
 				<th>ID</th>
 				<th>Sequence</th>
-				<th>Length<br><span class="filter"><input type="checkbox" id="lengthFilterCheck" oninput="updateFilter()">Filter: <select id="filterOperator" oninput="updateFilter()"><option value="equals">=</option><option value="greater">></option><option value="less">&lt</option></select><input type="number" style="width: 6em;" id="lengthFilter" oninput="updateFilter()"></span></th>
+				<th>Length<br><span class="filter"><input type="checkbox" id="lengthFilterCheck" oninput="updateFilter()">Filter: <select id="filterOperator" oninput="updateFilter()"><option value="equals">=</option><option value="greater">></option><option value="less">&lt</option></select><input type="number" id="lengthFilter" oninput="updateFilter()"></span></th>
 			</tr>
 		</thead>
 		<tbody id="dataLog"></tbody>

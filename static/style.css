@@ -5,7 +5,7 @@
 body {
 	background-color: #333;
 	color: #ddd;
-	font-size: larger;
+	font-size: 19px;
 	font-weight: bold;
 	margin: 0;
 }
@@ -17,7 +17,7 @@ table {
 }
 
 td, th {
-	border: 1px solid #555;
+	border: 2px solid #555;
 	text-align: left;
 	padding: 8px;
 }
@@ -36,5 +36,45 @@ tr:nth-child(even) {
 
 .filter {
 	/* float: right; */
-	font-size: medium;
+	font-size: 0.9em;
+}
+
+#ipFilter, #filterOperator, #lengthFilter {
+	border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 550;
+    color: #ddd;
+    background: #2d2d2d;
+    border-color: #555;
+    border-style: solid;
+}
+
+#filterOperator {
+	border-radius: 10px 0 0 10px;
+	border-width: 2px;
+	border-right: none;
+	/* appearance: none; */
+}
+
+#lengthFilter {
+	width: 6em;
+	border-radius: 0 10px 10px 0;
+	padding: 6px;
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+	  font-size: 14px;
+	}
+
+	#ipFilter {
+		width: 100px;
+	}
+
+	#lengthFilter {
+		width: 50px;
+	}
 }
