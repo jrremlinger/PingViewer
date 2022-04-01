@@ -3,16 +3,14 @@
 - Python 3 (Including pip, venv, and testresources, these are USUALLY preinstalled with python)
 - Git (To download and pull updates with 'git pull')
 
-### Clone the repository and create the virtual environment:
+### Clone the repository and navigate to it:
 ```
 git clone https://github.com/ToxicOmegaMusic/PingViewer.git
 cd PingViewer/
-python3 -m venv venv
 ```
-### Install the required python packages:
+### Perform first time setup:
 ```
-source venv/bin/activate
-pip3 install -r requirements.txt
+./setup.sh
 ```
 ### Starting the server:
 > It will be running on port 5012, and can be closed with ctrl+c
