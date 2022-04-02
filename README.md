@@ -5,7 +5,7 @@
 
 ### Clone the repository and navigate to it:
 ```
-git clone https://github.com/ToxicOmegaMusic/PingViewer.git
+git clone https://github.com/jrremlinger/PingViewer.git
 cd PingViewer/
 ```
 ### Perform first time setup:
