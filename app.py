@@ -17,7 +17,7 @@ def testOut(data):
 	socketio.emit('send data', data)
 
 def tcpLoop():
-	p = sub.Popen(['sudo', 'tcpdump', '-nn', '(icmp[0] == 8) || (icmp6 && ip6[40] == 0x80)', '-U', '-l', '-t'], stdout=sub.PIPE)
+	p = sub.Popen(['sudo', '/usr/sbin/tcpdump', '-nn', '(icmp[0] == 8) || (icmp6 && ip6[40] == 0x80)', '-U', '-l', '-t'], stdout=sub.PIPE)
 	for line in iter(p.stdout.readline, b''):
 		line = line.decode('utf-8').split()
 		if (line[4] == 'ICMP6,'):
@@ -28,4 +28,4 @@ def tcpLoop():
 eventlet.spawn(tcpLoop)
 
 if __name__ == '__main__':
-	socketio.run(app, host = '0.0.0.0', port = 5012)
+	socketio.run(app, host = '0.0.0.0', port = 8080)
