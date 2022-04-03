@@ -42,19 +42,19 @@ function filterProtocol(index) {
 function filterLength(index) {
 	if ($('#lengthFilterCheck').prop('checked')) {
 		if ($('#filterOperator').val() == "equals") {
-			if (dataArr[index].len == $('#lengthFilter').val()) {
+			if (parseInt(dataArr[index].len) == $('#lengthFilter').val()) {
 				$('#data_' + index).show();
 			} else {
 				$('#data_' + index).hide();
 			}
 		} else if ($('#filterOperator').val() == "greater") {
-			if (dataArr[index].len > $('#lengthFilter').val()) {
+			if (parseInt(dataArr[index].len) > $('#lengthFilter').val()) {
 				$('#data_' + index).show();
 			} else {
 				$('#data_' + index).hide();
 			}
 		} else if ($('#filterOperator').val() == "less") {
-			if (dataArr[index].len < $('#lengthFilter').val()) {
+			if (parseInt(dataArr[index].len) < $('#lengthFilter').val()) {
 				$('#data_' + index).show();
 			} else {
 				$('#data_' + index).hide();
