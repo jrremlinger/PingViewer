@@ -1,7 +1,7 @@
 let max = 0;
 let dataArr = [];
 
-let socket = io.connect('http://' + document.domain + ':' + location.port);
+let socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port);
 socket.on('connect', function() {});
 
 function writeData(data) {
