@@ -65,9 +65,9 @@ tr:nth-child(even) {
 	padding: 6px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 825px) {
 	body {
-	  font-size: 14px;
+		font-size: 14px;
 	}
 
 	#ipFilter {

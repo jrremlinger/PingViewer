@@ -6,7 +6,7 @@ socket.on('connect', function() {});
 
 function writeData(data) {
 	dataArr[max] = data;
-	$('#dataLog').html(`<tr id='data_${max}'><td>${data.ip}</td><td>${data.type}</td><td>${data.id}</td><td>${data.seq}</td><td>${data.len}</td></tr>` + $('#dataLog').html());
+	$('#dataLog').html(`<tr id='data_${max}'><td>${data.ttl}</td><td>${data.ip}</td><td>${data.type}</td><td>${data.id}</td><td>${data.seq}</td><td>${data.len}</td></tr>` + $('#dataLog').html());
 	max++;
 	updateFilter();
 }
